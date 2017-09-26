@@ -13,10 +13,10 @@ let VuexI18nPlugin = {};
 VuexI18nPlugin.install = function install(Vue, store, config) {
 	// TODO: remove this block for next major update (API break)
 	if (typeof arguments[2] === 'string' || typeof arguments[3] === 'string') {
-		console.warn('VuexI18nPlugin: Registering the plugin with a string for `moduleName` or `modifiers` is deprecated. Use a configuration object instead.', 'https://github.com/dkfbasel/vuex-i18n#setup');
+		console.warn('VuexI18nPlugin: Registering the plugin with a string for `moduleName` or `identifiers` is deprecated. Use a configuration object instead.', 'https://github.com/dkfbasel/vuex-i18n#setup');
 		config = {
 			moduleName: arguments[2],
-			modifiers: arguments[3]
+			identifiers: arguments[3]
 		};
 	}
 	const { moduleName, identifiers, onNoTranslation } = Object.assign({
